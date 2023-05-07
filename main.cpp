@@ -1,3 +1,4 @@
+#include <iostream>
 #include <random>
 #include <SFML/Graphics.hpp>
 #include "linear_interpolation.h"
@@ -55,6 +56,8 @@ int main() {
 		}
 
 		if (iteration < ITERATIONS_COUNT) {
+			std::cout << "Iteration: " << iteration << "\n";
+
 			int random_number = uniform_int_distribution(default_random_engine);
 
 			sf::Vector2f new_point_position(linear_interpolation_vector2f(circles[iteration].getPosition(),
